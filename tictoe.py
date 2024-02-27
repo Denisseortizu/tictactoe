@@ -5,7 +5,7 @@ def ronda_f():
     global ronda
     ronda+= 1 
     print("-._.--._.--._.--._.--._.--._.--._.-")
-    print("Comienza la ronda "+ str(ronda))
+    print("   +++  Comienza la ronda "+ str(ronda)+"  +++")
     for _ in range(2):
         turno_f()
         if(ganado):
@@ -17,13 +17,13 @@ def ronda_f():
 def turno_f():
     global jugador, turno
     print("------------------------------------")
-    print("¡Empieza el turno "+ str(turno) +"! ¡Jugador "+ str(jugador) +" es tu turno!")
+    print("  ¡Empieza el turno "+ str(turno) +"!  |  ¡Jugador "+ str(jugador) +" es tu turno!")
     input_cdn()
-    if(jugador>1):
-        jugador = 1
+    if(ganado):
+        jugador = jugador
     else:
-        if(ganado):
-            jugador = jugador
+        if(jugador>1):
+            jugador = 1
         else:
             jugador += 1
     turno += 1
